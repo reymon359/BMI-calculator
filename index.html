@@ -2,22 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="beer.js"></script>
-    <title>IMC calculator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="beer.js"></script>
+  <title>IMC calculator</title>
 </head>
 
-<body onload="generateBoard(2)">
+<body>
 
-    <div class=" max-550">
-        <p>An <b>IMC calculator</b> I made for a personal project.
-      
-        </p>
+  <div class=" max-550">
+    <p>An <b>IMC calculator</b> I made for a personal project. </p>
+    <form action="/action_page.php" onsubmit="myFunction()">
+      Enter name: <input type="text" name="fname">
+      <input type="submit" value="Submit" class="button">
+    </form>
 
+    <div>
+      <h4>IMC: {{imc |  number:'1.0-2' }} {{imcText }}
+        <ion-icon margin-left (click)="infoIMC()" name="help-circle"></ion-icon>
+      </h4>
+      <div id="imcContainer">
+        <div id="IMCbar"></div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
