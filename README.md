@@ -1,4 +1,4 @@
-# IMC calculator
-An IMC calculator
+# BMI calculator
+A BMI calculator
 
-see it live on codepen 
+see it live on codepen  https://codepen.io/reymon359/pen/OdXaMN
