@@ -2,8 +2,6 @@
 // Author: Ramon Morcillo @reymon359
 
 function calculateImc(form) {
-    console.log(form);
-    // event.preventDefault();
     let imcBar = document.getElementById('IMCbar');
     let imcData = document.getElementById('imcData');
     let imc = form.weight.value / ((form.height.value / 100) * (form.height.value / 100));
@@ -23,13 +21,13 @@ function calculateImc(form) {
     } else if (imc > 50) {
         imcText = 'Level 4 obesity';
     }
-    // if (imc <= 15) {
-    //   imcBar.style.width = '0%';
-    // } else if (imc >= 50) { // si es 50 o mayor es 100%
-    //   imcBar.style.width = '100%';
-    // } else { // If IMC wis between 15 and 50
-    //   imcBar.style.width = (((imc - 15) * 100) / 35) + '%';
-    // }
-    imcData.innerHTML = `IMC: ${imc}  ${imcText}`;
+    if (imc <= 15) {
+        imcBar.style.width = '0%';
+    } else if (imc >= 50) { // si es 50 o mayor es 100%
+        imcBar.style.width = '100%';
+    } else { // If IMC wis between 15 and 50
+        imcBar.style.width = (((imc - 15) * 100) / 35) + '%';
+    }
+    imcData.innerHTML = `IMC: ${parseFloat(imc).toFixed(2)}  ${imcText}`;
     return false;
 }

@@ -15,9 +15,9 @@
         <p>An <b>IMC calculator</b> I made for a personal project. Enter your height in cm and your weight in kg</p>
         <form onsubmit="return calculateImc(this);" action="">
             <label for="height">Height (cm)</label>
-            <input type="number" name="height" id="height" placeholder="180"><br>
+            <input type="number" max="200" name="height" id="height" placeholder="180"><br>
             <label for="weight">Weight (kg)</label>
-            <input type="number" name="weight" id="weight" placeholder="74.8"><br>
+            <input type="number" max="300" name="weight" id="weight" placeholder="74.8"><br>
             <input type="submit" value="Submit" class="button">
         </form>
 
