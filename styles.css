@@ -2,6 +2,10 @@
   font-family: Arial;
 
 }
+body{
+  background-color: #1d1e22;
+  color:#c5f1ff;
+}
 .button {
     color: #fff;
     background-color: #003896;
